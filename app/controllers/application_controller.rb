@@ -20,6 +20,10 @@ class ApplicationController < Sinatra::Base
   post '/nicknames' do
     nickname = Nickname.create(nickname: params [:nickname], athlete_id: params[:athlete_id])
     nickname.to_json
-  end  
-
+  end
+  
+  patch '/nicknames/:id' do
+    nickname = Nickname.find(params[:id])
+    nickname.update(nickname: params [:nickname], athlete_id: params[:athlete_id])
+    nickname.to_json
 end
