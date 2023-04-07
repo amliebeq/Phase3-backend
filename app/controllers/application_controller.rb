@@ -1,10 +1,20 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
-  
-  # Add your routes here
+
   get "/athletes" do
     athletes = Athlete.all
-    athletes.to_json(include: :nicknames)\
-  end  
+    athletes.to_json(include: :nicknames)
+  end
+  
+  delete '/nicknames/:id' do
+    nickname = Nickname.find(params[:id])
+    nickname.destroy
+    nickname.to_json
+  end
+
+  post '/athletes' do
+    athlete = Athlete.create(name: params[:name], sport: params[:sport], reference_url: params[:reference_url])
+    athlete.to_json
+  end 
 
 end
