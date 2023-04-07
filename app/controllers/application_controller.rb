@@ -15,6 +15,11 @@ class ApplicationController < Sinatra::Base
   post '/athletes' do
     athlete = Athlete.create(name: params[:name], sport: params[:sport], reference_url: params[:reference_url])
     athlete.to_json
-  end 
+  end
+  
+  post '/nicknames' do
+    nickname = Nickname.create(nickname: params [:nickname], athlete_id: params[:athlete_id])
+    nickname.to_json
+  end  
 
 end
