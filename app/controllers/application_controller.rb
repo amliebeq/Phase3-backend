@@ -7,9 +7,7 @@ class ApplicationController < Sinatra::Base
   end
   
   delete '/nicknames/:id' do
-    nickname = Nickname.find(params[:id])
-    nickname.destroy
-    nickname.to_json
+    nickname = Nickname.find(params[:id]).destroy
   end
 
   post '/athletes' do
@@ -24,7 +22,7 @@ class ApplicationController < Sinatra::Base
   
   patch '/nicknames/:id' do
     nickname = Nickname.find(params[:id])
-    nickname.update(nickname: params[:nickname], athlete_id: params[:athlete_id])
+    nickname.update(nickname: params[:nickname])
     nickname.to_json
   end 
 end
