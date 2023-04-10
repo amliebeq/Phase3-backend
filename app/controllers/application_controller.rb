@@ -12,7 +12,8 @@ class ApplicationController < Sinatra::Base
 
   post '/athletes' do
     athlete = Athlete.create(name: params[:name], sport: params[:sport], reference_url: params[:reference_url])
-    athlete.to_json
+    nickname = Nickname.create(nickname: params[:nickname], athlete_id: athlete.id)
+    athlete.to_json(include: :nicknames)
   end
   
   post '/nicknames' do
