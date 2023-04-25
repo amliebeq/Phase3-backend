@@ -1,85 +1,12 @@
-The phase 3 project was to create a full stack web application with a backend API that I created. This is that back end.
-I created a glossary of players, their reference pages, and nicknames. 
-I created a one to many association between players and their nicknames.
-I added the player id as a foreign id to the nicknames table.
-Commits:
-Commits on Apr 18, 2023
-fixed backend
+# Player Nickname Glossary
 
-@amliebeq
-amliebeq committed last week
- 
-Commits on Apr 17, 2023
-Updated controller
+This is a glossary of players, their sports refence pages, and their nicknames
 
-@amliebeq
-amliebeq committed last week
- 
-Commits on Apr 10, 2023
-Added ability to add a new nickname upon creation of an athlete
+## Installation
 
-@amliebeq
-amliebeq committed 2 weeks ago
- 
-Commits on Apr 9, 2023
-updated patch
+Run bundle install in the cli to get started
+You will also need to fork and clone https://github.com/amliebeq/phase3-frontend to get the code for the UI of this project
 
-@amliebeq
-amliebeq committed 2 weeks ago
- 
-Commits on Apr 7, 2023
-fixed the crud
+## External Sources
 
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-hopefully did the requests right
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-added a post
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-added some crud
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-created get part of API
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-seeded some data
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-connected models
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-created tables
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-built out models
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-added migration and model info
-
-@amliebeq
-amliebeq committed 3 weeks ago
- 
-Commits on Apr 6, 2023
-test
-
-@amliebeq
-amliebeq committed 3 weeks ago
+I used basketball reference, baseball reference, and wikipedia for the links and nicknames.
